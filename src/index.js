@@ -6,7 +6,7 @@ import { BrowserRouter } from "react-router-dom";
 
 
 
-axios.defaults.baseURL="http://localhost:5024";
+axios.defaults.baseURL=process.env.REACT_APP_BASE_URl;
 axios.interceptors.request.use(req=>{console.log(req);
     return req;
 });
