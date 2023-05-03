@@ -3,22 +3,11 @@ import axios from 'axios';
 axios.interceptors.response.use(
   function (response)
   {return response},function(error){
-    if(error.response.status==401)
+    if(error.response.status===401)
     return (window.location.href="/login")
     return Promise.reject(error)
   }
 )
-
-
-
-function saveAccesToken(authResult){
-localStorage.setItem("Token",authResult.token)
-}
-function saveAuthorizationBearer(){
-  const accesToken=localStorage.getItem("Token")
-  if(accesToken)
-  axios.defaults.headers.common["Authorization"]=`Bearer ${accesToken}`;
-}
 
 export default {
   getTasks: async () => {

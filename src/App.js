@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { Routes } from 'react-router-dom';
-import App2 from './App2';
+import React from 'react';
 import RoutesArr from './RoutesArr';
 
 function App() {
