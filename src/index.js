@@ -8,8 +8,7 @@ import { BrowserRouter } from "react-router-dom";
 // console.log(process.env.REACT_APP_BASE_URl)
  axios.defaults.baseURL=process.env.REACT_APP_BASE_URl;
 //axios.defaults.baseURL="https://todolist-server-2469.onrender.com";
-axios.interceptors.request.use(req=>{console.log("1111"+process.env.REACT_APP_BASE_URl+"2222");
-//                                      console.log(req);
+axios.interceptors.request.use(req=>{ console.log(req);
     return req;
 });
 ReactDOM.render(
